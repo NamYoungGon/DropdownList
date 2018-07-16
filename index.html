@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Dropdown List</title>
+</head>
+<body>
+  <div id="dropdown-wrap">12312313123123</div>
+  <script src="dropdownlist.js"></script>
+  <script>
+    const data = [];
+    for (let i = 0; i < 50; i++) {
+      data.push({
+        text: '테스트' + i,
+        value: i
+      })
+    }
+
+    var dropdown = DropdownList('#dropdown-wrap', {
+      width: 200,
+      height: 300
+    });
+
+    dropdown.change(function () {
+      console.log('change');
+    });
+
+    dropdown.setData(data)
+  </script>
+</body>
+</html>
